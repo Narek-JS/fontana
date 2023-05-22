@@ -1,4 +1,3 @@
-import { WORDS } from "@/constants/menuLinks";
 import { ReducerAction } from "../../actionTypes";
 
 export const setHomeDataAction = (data: any): ReducerAction => ({
@@ -7,7 +6,7 @@ export const setHomeDataAction = (data: any): ReducerAction => ({
 
 export const setHomeErrorAction = (error: any): ReducerAction => ({
     type: 'SET_HOME_ERROR',
-    payload: { error: error && error.message || WORDS.failedMessage}
+    payload: { error: error && error.message || 'error'}
 });
 
 export const setHomeIsLoadingAction = (isLoading: boolean): ReducerAction => ({
