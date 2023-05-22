@@ -1,0 +1,39 @@
+.bannerSection {
+    position: relative;
+}
+
+.bannerContent {
+    padding-top: 210px;
+}
+
+.rightContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.rightContent p {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 700;
+    font-size: 14px;
+    color:#16426C;
+}
+
+.rightContent p a {
+    color: #24B966;
+}
+
+@media screen and (max-width: 768px) {
+    .bannerContent {
+        padding-top: initial;
+    }
+    .informationPanelFixed {
+        padding-top: 135px;
+    }
+    .rightContent {
+        align-items: flex-start;
+    }
+}

@@ -1,0 +1,56 @@
+.section {
+    margin-bottom: 50px;
+}
+
+.content {
+    padding-bottom: 50px;
+    border-bottom: 1px dashed #16426C;
+}
+
+.title {
+    color: #24B966;
+    font-weight: 700;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 22px;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.post:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.topLine {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nameWrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.name {
+    color: #16426C;
+}
+
+.date, 
+.comment {
+    color: rgba(25, 30, 39, 0.8);
+}
+
+@media screen and (min-width: 769px) {
+    .comment {
+        max-width: 600px;
+    }
+
+}

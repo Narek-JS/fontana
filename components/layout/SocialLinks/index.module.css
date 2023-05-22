@@ -1,0 +1,14 @@
+.socialLinks {
+    position: fixed;
+    right: 15px;
+    top: 40%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1;
+}
+
+.socialLinks div {
+    cursor: pointer;
+}

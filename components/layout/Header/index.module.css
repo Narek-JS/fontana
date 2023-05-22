@@ -1,0 +1,247 @@
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+}
+
+/* All in the top panel in the first list */
+.topPart {
+    background-color: var(--headerTopbg);
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.layoutForm {
+    height: 100vh;
+    width: 100%;
+    background-color: #16426C;
+    position: fixed;
+    top: -100vh; /* Initial position off the screen */
+    left: 0;
+    z-index: 999;
+    display: flex;
+    padding: 20px 20px 0 20px;
+    animation-name: slideFromTop;
+    animation-duration: .3s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+:has(.layoutForm) body {
+    overflow: hidden;
+}
+
+.homeHeaderDesktop .topPart {
+    background-color: transparent;
+}
+
+.topPartContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 81px;
+}
+
+.topPartContent p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.topPartContent p a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #16426C;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.homeHeaderDesktop .topPartContent p a {
+    color: #FFFFFF;
+}
+
+.partQouteBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.topPartQoute {
+    display: flex;
+    flex-direction: column;
+}
+
+.partQouteBlock p {
+    color: #24B966;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+/* All in the information panel in the seccond list */
+.informationPanel {
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 115px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s;
+}
+
+.informationPanelFixed {
+    position: fixed;
+    z-index: 999;
+    animation-name: move;
+    animation-duration: .3s;
+    animation-timing-function: ease-in-out;
+    margin-bottom: 20px;
+}
+
+.homeHeaderDesktop .informationPanel {
+    background-color: transparent;
+}
+
+.homeHeaderDesktop .informationPanelFixed {
+    background-color: #FFFFFF;
+}
+
+.informationPanelContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.informationPanelLogoWrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.informationPanelTitleWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.informationPanelTitle {
+    color: #16426C;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.homeHeaderDesktop .informationPanelTitle {
+    color: #FFFFFF;
+}
+
+.homeHeaderDesktop .informationPanelFixed .informationPanelTitle {
+    color: #16426C;
+}
+
+.informationPaneldescription {
+    color: #16426C;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.homeHeaderDesktop .informationPaneldescription {
+    color: #FFFFFF;
+}
+
+.homeHeaderDesktop .informationPanelFixed .informationPaneldescription {
+    color: #16426C;
+}
+
+.burgerWrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    width: 50px;
+}
+
+.group p {
+    color: rgba(36, 185, 102, 0.6);
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.navBar {
+    display: flex;
+    align-items: center;
+}
+
+.navBar ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.navBar ul li,
+.navBar ul li a {
+    color: #16426C;
+    font-weight: 700;
+}
+
+.homeHeaderDesktop .navBar ul li,
+.homeHeaderDesktop .navBar ul li a {
+    color: #FFFFFF;
+}
+
+.homeHeaderDesktop .informationPanelFixed .navBar ul li,
+.homeHeaderDesktop .informationPanelFixed .navBar ul li a {
+    color: #16426C;
+}
+
+@keyframes slideFromTop {
+    0% {
+      top: -100vh;
+    }
+    100% {
+      top: 50px;
+    }
+}
+
+@keyframes move {
+    0% {
+       transform: translateY(-300px);
+    }
+    100% {
+       transform: translateY(0px);
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .topPartContent {
+        gap: 20px;
+    }
+    .topPartContent p a {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        position: initial;
+    }
+
+    .informationPanelTitle {
+        font-size: 20px;
+    }
+
+    .informationPaneldescription {
+        font-size: 12px;
+    }
+}

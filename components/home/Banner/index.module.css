@@ -1,0 +1,25 @@
+.bannerSection {
+    position: relative;
+}
+
+.bannerImage {
+    color: transparent;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bannerContent {
+    padding-top: 210px;
+}
+
+@media screen and (max-width: 768px) {
+    .bannerContent {
+        padding-top: initial;
+    }
+    .informationPanelFixed {
+        padding-top: 135px;
+    }
+}

@@ -1,0 +1,38 @@
+
+.service {
+    max-width: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #24B966;
+    padding: 20px 33px;
+}
+
+.serviceImage {
+    margin-bottom: 48px;
+}
+
+.serviceTitle {
+    color: #24B966;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.serviceDescription {
+    color: rgba(25, 30, 39, 0.8);
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.serviceLink {
+    color: #16426C;
+    font-weight: 500;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
