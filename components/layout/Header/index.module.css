@@ -180,6 +180,7 @@
     color: rgba(36, 185, 102, 0.6);
     font-weight: 500;
     font-size: 12px;
+    white-space: nowrap;
 }
 
 .navBar {
