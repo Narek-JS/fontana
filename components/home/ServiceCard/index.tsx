@@ -30,7 +30,7 @@ const ServiceCard: React.FC<IProps> = ({
             <p className={classes.serviceDescription}>
                 {description }
             </p>
-            <Link href='/' className={classes.serviceLink}>
+            <Link href={link} className={classes.serviceLink}>
                 <ArrowToRightBlue />
                 Read More
             </Link>

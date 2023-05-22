@@ -11,6 +11,8 @@
 
 .serviceImage {
     margin-bottom: 48px;
+    width: 80px;
+    height: 40px;
 }
 
 .serviceTitle {
