@@ -1,5 +1,3 @@
-import { DropdownItems } from "@/models/dropdown";
-import { LinkGroupType } from "@/models/links";
 import { BingFooterIcon } from "@/public/assets/svges/BingFooterIcon";
 import { BingIcon } from "@/public/assets/svges/BingIcon";
 import { FbFooterIcon } from "@/public/assets/svges/FbFooterIcon";
@@ -12,25 +10,6 @@ import { TwitterFooterIcon } from "@/public/assets/svges/TwitterFooterIcon";
 import { TwitterIcon } from "@/public/assets/svges/TwitterIcon";
 import { YelpIcon } from "@/public/assets/svges/YelpIcon";
 
-export const timeOptions = [
-    'As soon as possible',
-    'Within 1 week',
-    'Within 2 weeks',
-    'Within 30 days',
-    'More than 30 days'
-]
-
-export const contactInfo: LinkGroupType = {
-    groupName: 'Contact Info',
-    links: [
-        {
-            text: 'Phone: ( 380 ) 867 - 0547'
-        },
-        {
-            text: 'Email: info@columbusautotransport.com'
-        }
-    ]
-}
 
 export const servicesTypes = [
     {
