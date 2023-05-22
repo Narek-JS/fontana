@@ -5,12 +5,16 @@ import { CertificateIcon } from '@/public/assets/svges/CertificateIcon';
 import { EmailIcon } from '@/public/assets/svges/EmailIcon';
 import Link from 'next/link';
 import classes from './index.module.css';
+import { useScrollPositionWindow } from '@/hooks/useScrollPositionWindow';
+import classNames from 'classnames';
 
 const MobileMenu: React.FC = () => {
     const {
         menus: { data: menuData },
         menuBar: { toogleIsOpen },        
     } = useContext(GlobalDatasContext);
+
+    const scrollPosition = useScrollPositionWindow()
 
     const links: Array<{
         title: string;
@@ -31,7 +35,9 @@ const MobileMenu: React.FC = () => {
     }, [menuData]);
 
     return (
-        <div className={classes.mobileMenu}>
+        <div className={classNames(classes.mobileMenu, {
+            [classes.t]: scrollPosition >= 50
+        })}>
                 <ul className={classes.links}>
                     { links.map(({ id, link, title }) => (
                         <li key={id} className={classes.link}>

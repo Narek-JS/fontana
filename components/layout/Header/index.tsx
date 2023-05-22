@@ -165,7 +165,10 @@ const Header: React.FC = () => {
                                     <OperatorIcon />
                                     <p>Call Now</p>
                                 </div>
-                                <div className={classes.group} onClick={toogleIsOpen}>
+                                <div className={classes.group} onClick={() => {
+                                    !isOpen && window.scroll({ top: 0 });
+                                    toogleIsOpen();
+                                }}>
                                     { isOpen ? (
                                         <Fragment>
                                             <CloseMenuIcon />
