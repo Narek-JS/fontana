@@ -20,6 +20,12 @@
     font-weight: 700;
     font-size: 18px;
     margin-bottom: 30px;
+    transition: all .15s;
+}
+
+.serviceTitle:hover {
+    transform: skewY(-1deg) skewX(-7deg) scale(1.1);
+    text-shadow: 0.5rem 1rem -2rem rgba(0, 0, 0, 0.2);
 }
 
 .serviceDescription {
@@ -32,9 +38,27 @@
 
 .serviceLink {
     color: #16426C;
-    font-weight: 500;
+    font-weight: 700;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
     gap: 10px;
+    height: 18px;
+}
+
+.serviceLink,
+.serviceLink:hover svg,
+.serviceLink:hover span {
+    transition: all .3s;
+}
+
+.serviceLink:hover svg {
+    transform: translateX(85px) rotate(-30deg);
+    filter: invert(50%) sepia(100%) saturate(370%) hue-rotate(94deg) brightness(98%) contrast(84%);
+}
+
+.serviceLink:hover span {
+    color: #24B966;
+    transform: translateX(-30px);
+    border-bottom: 1px solid #24B966;
 }

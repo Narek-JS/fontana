@@ -9,6 +9,10 @@
     z-index: 1;
 }
 
-.socialLinks div {
-    cursor: pointer;
+.socialLinks a {
+    transition: all .15s;
+}
+
+.socialLinks a:hover {
+    transform: scale(1.3);
 }

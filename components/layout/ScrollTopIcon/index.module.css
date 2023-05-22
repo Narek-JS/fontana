@@ -17,7 +17,17 @@
     transition: .3s;
     z-index: 1;
     cursor: pointer;
+    transition: all .3s;
 }
+
+.scrollTopIcon:hover {
+  transform: scale(1.4);
+}
+
+.scrollTopIcon span:hover {
+  transform: scale(1.4);
+}
+
 
 .scrollTopIcon span {
     color: #fff;

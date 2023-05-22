@@ -108,20 +108,24 @@ const Header: React.FC = () => {
     const navBarLinks: Array<{
         title: string;
         link: string;
+        isActive: boolean;
         id: number;
     }> = useMemo(() => {
         if(menuData?.topHeaderItems?.length){
             const centerItems = menuData.topHeaderItems.find(item => item?.title === 'Center');
             if(centerItems && centerItems.children && centerItems.children.length) {
+                console.log('pathname --> ', pathname);
+                console.log('children --> ',  centerItems.children);
                 return centerItems.children.map(item => ({
                     id: item.id,
                     title: item.title,
-                    link: item.url
+                    link: item.url,
+                    isActive: pathname.replace('/', '') === item.url.replace('/', '')
                 }))
             };
         };
         return [];
-    }, [menuData]);
+    }, [menuData, pathname]);
 
     if(menuError !== null) return <Redirect to='404' />;
 
@@ -178,8 +182,10 @@ const Header: React.FC = () => {
                         ) : (
                             <nav className={classes.navBar}>
                                 <ul className={classes.ul}>
-                                    { navBarLinks.map(({ id, link, title }) => (
-                                        <li key={id}>
+                                    { navBarLinks.map(({ id, link, title, isActive }) => (
+                                        <li key={id} className={classNames({
+                                            [classes.activeLink]: isActive
+                                        })}>
                                             <Link href={link}>{title}</Link>
                                         </li>
                                     ))}

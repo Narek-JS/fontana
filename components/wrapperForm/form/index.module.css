@@ -80,6 +80,7 @@
 }
 
 .inputsLine {
+    width: 100%;
     display: flex;
     gap: 25px;
 }
@@ -87,6 +88,7 @@
 .wrapperInput {
     display: flex;
     flex-direction: column;
+    width: 100%;
     position: relative;
 }
 
@@ -241,6 +243,13 @@
     color: #FFFFFF;
     background: #24B966 !important;
     margin-top: 20px;
+    transition: all .15s;
+    height: 35px;
+    cursor: pointer;
+}
+
+.submitBtn:hover {
+    font-size: 19px;
 }
 
 @media screen and (max-width: 1224px) {
