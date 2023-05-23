@@ -1,7 +1,6 @@
-import { metaTags } from '@/constants/metaTags';
 import { Fragment } from 'react';
-import { Banner } from '@/components/faq/Banner';
-import { Questions } from '@/components/faq/Questions';
+import { metaTags } from '@/constants/metaTags';
+import { Banner, Questions } from '@/components/faq';
 import { CommentForm } from '@/components/commentForm';
 import { Container } from '@/components/ui/container';
 import Head from 'next/head';

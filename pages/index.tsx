@@ -1,8 +1,6 @@
 import { metaTags } from '@/constants/metaTags';
 import { Fragment } from 'react';
-import { Banner, ChoosUs, Services } from '@/components/home';
-import { InsuranceServices } from '@/components/home/InsuranceServices';
-import { ContactInfo } from '@/components/home/ContactInfo';
+import { Banner, ChoosUs, ContactInfo, InsuranceServices, Services } from '@/components/home';
 import Head from 'next/head';
 
 export default function Home() {

@@ -1,4 +1,3 @@
-import classes from './index.module.css';
 import { Container } from "@/components/ui/container";
 import { WrapperForm } from "@/components/wrapperForm";
 import { useScrollPositionWindow } from "@/hooks/useScrollPositionWindow";
@@ -6,6 +5,7 @@ import useWindowSize from '@/hooks/useWindowSize';
 import classNames from "classnames";
 import Image from 'next/image';
 import Link from 'next/link';
+import classes from './index.module.css';
 
 const Banner: React.FC = () => {
     const scrollPosition = useScrollPositionWindow();

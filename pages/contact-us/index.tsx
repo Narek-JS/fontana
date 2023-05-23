@@ -1,10 +1,8 @@
 import { metaTags } from '@/constants/metaTags';
 import { Fragment } from 'react';
-import { Banner } from '@/components/contactUs/Banner';
-import { ContactInfo } from '@/components/contactUs/ContactInfo';
-import { PostComments } from '@/components/contactUs/PostComments';
 import { Container } from '@/components/ui/container';
 import { CommentForm } from '@/components/commentForm';
+import { Banner, ContactInfo, PostComments } from '@/components/contactUs';
 import Head from 'next/head';
 
 export default function Contact() {

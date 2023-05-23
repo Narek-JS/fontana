@@ -1,6 +1,6 @@
-import { metaTags } from '@/constants/metaTags';
 import { Fragment } from 'react';
-import { Banner } from '@/components/quote/Banner';
+import { metaTags } from '@/constants/metaTags';
+import { Banner } from '@/components/quote';
 import Head from 'next/head';
 
 export default function Quote() {
